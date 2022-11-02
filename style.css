@@ -1,0 +1,118 @@
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-darkCyan: hsl(179, 100%, 13%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+margin:0;
+padding:0;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+min-height: 100vh;
+gap: 10rem;
+font-size: 15px;
+}
+img { 
+    display: block;
+    max-width: 100%;
+}
+
+a { 
+    text-decoration: none;
+}
+
+.flexContainer {
+    display: flex;
+    width: 90%;
+    max-width: 900px;
+    flex-direction: column;
+    margin-block: 1rem;
+}
+
+.flexContainer > .flexContainer__card {
+    flex: 1;
+    padding: 2rem;
+    min-height: 25rem;
+    color: hsl(0, 0%, 95%);
+    max-width: 20rem;
+    align-self: center;
+    position: relative;
+}
+
+.flexContainer__card--orange {
+    background-color: var(--Bright-orange);
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+.flexContainer__card--cyan {
+    background-color: var(--Dark-cyan);
+}
+.flexContainer__card--green {
+    background-color: var(--Very-darkCyan);
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.flexContainer__card > p { 
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.flexContainer__card > h2,a {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.flexContainer__card > a { 
+    background-color: white;
+    color: black;
+    padding: 1em 2em;
+    position: absolute;
+    bottom: 50px;
+    border-radius: 2rem;
+    mix-blend-mode: screen;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.flexContainer__card > a:hover {
+    /* mix-blend-mode: none; */
+    color:white;
+    background-color: transparent;
+    border: 3px solid white;
+}
+
+.flexContainer__card > h2 {
+    font-size: 1.75rem;
+}
+
+
+@media screen and ( min-width: 768px ) {
+    .flexContainer { 
+    flex-direction: row; 
+    margin-block: 0;
+}
+.flexContainer > .flexContainer__card{
+    max-width: none;
+    min-height: 27rem;
+}
+
+.flexContainer__card--green {
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.5rem;
+}
+
+.flexContainer__card--orange {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+}
+
+}
